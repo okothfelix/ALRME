@@ -1,0 +1,25 @@
+body {
+	overflow-x: hidden;
+	direction: rtl;
+}
+
+.list-unstyled {
+	padding-right: 0;
+}
+
+.owl-carousel {
+	direction: ltr;
+}
+
+.owl-carousel .owl-item {
+	direction: rtl;
+}
+
+.testimonial-one__client-details {
+	clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.main-menu .main-menu__list>li+li,
+.stricky-header .main-menu__list>li+li {
+	margin-right: 70px;
+}
