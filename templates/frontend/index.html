@@ -1,1177 +1,204 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home </title>
-    <link rel="apple-touch-icon" sizes="180x180" href="" />
-    <link rel="icon" type="image/png" sizes="32x32" href="" />
-    <link rel="icon" type="image/png" sizes="16x16" href="" />
-    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <meta name="description" content="" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/vendors/bootstrap/css/bootstrap.min.css')}}"/>
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/vendors/animate/animate.min.css')}}"/>
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/vendors/animate/custom-animate.css')}}"/>
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/vendors/fontawesome/css/all.min.css')}}"/>
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/vendors/jarallax/jarallax.css')}}"/>
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css')}}"/>
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/vendors/nouislider/nouislider.min.css')}}"/>
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/vendors/nouislider/nouislider.pips.css')}}"/>
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/vendors/odometer/odometer.min.css')}}"/>
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/vendors/swiper/swiper.min.css')}}"/>
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/vendors/agrion-icons/style.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/vendors/tiny-slider/tiny-slider.min.css')}}"/>
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/vendors/reey-font/stylesheet.css')}}"/>
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/vendors/owl-carousel/owl.carousel.min.css')}}"/>
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/vendors/owl-carousel/owl.theme.default.min.css')}}"/>
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/vendors/bxslider/jquery.bxslider.css')}}"/>
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/vendors/bootstrap-select/css/bootstrap-select.min.css')}}"/>
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/vendors/vegas/vegas.min.css')}}"/>
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/vendors/jquery-ui/jquery-ui.css')}}"/>
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/vendors/timepicker/timePicker.css')}}"/>
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/agrion.css')}}"/>
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/agrion-responsive.css')}}"/>
+    <!-- SEO Meta description -->
+    <meta name="description"
+          content="">
+    <meta name="author" content="">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+    <meta property="og:site_name" content=""/> <!-- website name -->
+    <meta property="og:site" content=""/> <!-- website link -->
+    <meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content=""/> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content=""/> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content=""/> <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article"/>
+
+    <title>BeTheConduit</title>
+
+    <!--favicon icon-->
+    <link rel="icon" href="img/favicon.png" type="image/png" sizes="16x16">
+
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7COpen+Sans:400,600&display=swap"
+          rel="stylesheet">
+
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--Magnific popup css-->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!--Themify icon css-->
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <!--Fontawesome icon css-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!--animated css-->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!--ytplayer css-->
+    <link rel="stylesheet" href="css/jquery.mb.YTPlayer.min.css">
+    <!--Owl carousel css-->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!--custom css-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--responsive css-->
+    <link rel="stylesheet" href="css/responsive.css">
+
 </head>
+<body>
 
-<body class="custom-cursor">
-
-    <div class="custom-cursor__cursor"></div>
-    <div class="custom-cursor__cursor-two"></div>
-
-    <div class="preloader">
-        <div class="preloader__image"></div>
+<div id="preloader">
+    <div class="loader1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
+</div>
 
+<div class="main">
 
-    <div class="page-wrapper">
-        <header class="main-header-two">
-            <div class="main-header-two__inner">
-                <div class="main-header-two__top">
-                    <div class="container">
-                        <div class="main-header-two__top-inner">
-                            <div class="main-header-two__logo">
-                                <a href="index.html"><img src="assets/images/resources/logo-2.png" alt=""></a>
-                            </div>
-                            <div class="main-header-two__top-left">
-                                <ul class="list-unstyled main-header-two__contact-list">
-                                    <li>
-                                        <div class="icon">
-                                            <i class="icon-email"></i>
-                                        </div>
-                                        <div class="text">
-                                            <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <i class="icon-pin"></i>
-                                        </div>
-                                        <div class="text">
-                                            <p>NY, Texas, West Ugenya.</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <i class="fas fa-phone-alt"></i>
-                                        </div>
-                                        <div class="text">
-                                            <p><a href="tel:9200886823">+92 (0088) 6823</a></p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="main-header-two__top-right">
-                                <div class="main-header-two__social">
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-facebook"></i></a>
-                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
+    <section class="about-us-section gray-light-bg ptb-100">
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="col-md-12 col-lg-6">
+                    <div class="about-img-wrap">
+                        <img src="img/africamap.png" alt="video" class="img-fluid rounded shadow-sm">
+                        <div class="card-img-overlay text-center">
+                            <a href="https://www.youtube.com/watch?v=9No-FiEInLA"
+                               class="popup-youtube video-play-icon color-bip shadow"><span
+                                    class="ti-control-play"></span> </a>
                         </div>
                     </div>
                 </div>
-                <div class="main-header-two__bottom">
-                    <nav class="main-menu main-menu-two">
-                        <div class="main-menu-two__wrapper">
-                            <div class="container">
-                                <div class="main-menu-two__wrapper-inner">
-                                    <div class="main-menu-two__left">
-                                        <div class="main-menu-two__main-menu-box">
-                                            <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
-                                            <ul class="main-menu__list one-page-scroll-menu">
-                                                <li class="current scrollToLink">
-                                                    <a href="#home">Home </a>
-                                                </li>
-                                                <li class="scrollToLink">
-                                                    <a href="#about">About</a>
-                                                </li>
-                                                <li class="scrollToLink">
-                                                    <a href="#services">Services</a>
-                                                </li>
-                                                <li class="scrollToLink">
-                                                    <a href="#projects">Projects</a>
-                                                </li>
-                                                <li class="scrollToLink">
-                                                    <a href="#team">Team</a>
-                                                </li>
-                                                <li class="scrollToLink">
-                                                    <a href="#blog">Blog</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </header>
-
-        <div class="stricky-header stricked-menu main-menu main-menu-two">
-            <div class="sticky-header__content"></div>
-        </div>
-
-        <section class="main-slider-two clearfix" id="home">
-            <div class="swiper-container thm-swiper__slider" data-swiper-options='{"slidesPerView": 1, "loop": true,
-                "effect": "fade",
-                "pagination": {
-                "el": "#main-slider-pagination",
-                "type": "bullets",
-                "clickable": true
-                },
-                "navigation": {
-                "nextEl": "#main-slider__swiper-button-next",
-                "prevEl": "#main-slider__swiper-button-prev"
-                },
-                "autoplay": {
-                "delay": 5000
-                }}'>
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <div class="image-layer-two"
-                            style="background-image: url({{url_for('static', filename='assets/images/backgrounds/main-slider-2-1.jpg')}});"></div>
-                        <!-- /.image-layer -->
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="main-slider-two__content">
-                                        <p class="main-slider-two__sub-title">BeTheConduit.</p>
-                                        <h2 class="main-slider-two__title">Education</h2>
-                                        <div class="main-slider-two__btn-box">
-                                            <a href="#about" class="thm-btn main-slider-two__btn">Discover More <i
-                                                    class="icon-right-arrow"></i> </a>
-                                        </div>
-                                        <div class="main-slider-two__shape-1">
-                                            <img src="{{url_for('static', filename='assets/images/shapes/main-slider-two-shape-1.png')}}" alt=""
-                                                class="float-bob-y">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="image-layer-two"
-                            style="background-image: url({{url_for('static', filename='assets/images/backgrounds/main-slider-2-2.jpg')}});"></div>
-                        <!-- /.image-layer -->
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="main-slider-two__content">
-                                        <p class="main-slider-two__sub-title">BeTheConduit.</p>
-                                        <h2 class="main-slider-two__title">Provision</h2>
-                                        <div class="main-slider-two__btn-box">
-                                            <a href="#about" class="thm-btn main-slider-two__btn">Discover More <i
-                                                    class="icon-right-arrow"></i> </a>
-                                        </div>
-                                        <div class="main-slider-two__shape-1">
-                                            <img src="{{url_for('static', filename='assets/images/shapes/main-slider-two-shape-1.png')}}" alt=""
-                                                class="float-bob-y">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="image-layer-two" style="background-image: url({{url_for('static', filename='assets/images/backgrounds/main-slider-2-3.jpg')}});"></div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="main-slider-two__content">
-                                        <p class="main-slider-two__sub-title">BeTheConduit</p>
-                                        <h2 class="main-slider-two__title">Research</h2>
-                                        <div class="main-slider-two__btn-box">
-                                            <a href="#about" class="thm-btn main-slider-two__btn">Discover More <i
-                                                    class="icon-right-arrow"></i> </a>
-                                        </div>
-                                        <div class="main-slider-two__shape-1">
-                                            <img src="{{url_for('static', filename='assets/images/shapes/main-slider-two-shape-1.png')}}" alt=""
-                                                class="float-bob-y">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <div class="swiper-pagination" id="main-slider-pagination"></div>
-
-                <!-- If we need navigation buttons -->
-                <div class="main-slider__nav">
-                    <div class="swiper-button-prev" id="main-slider__swiper-button-next">
-                        <i class="icon-right-arrow"></i>
-                    </div>
-                    <div class="swiper-button-next" id="main-slider__swiper-button-prev">
-                        <i class="icon-right-arrow"></i>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="about-two" id="about">
-            <div class="about-two__bg float-bob-x">
-                <img src="assets/images/backgrounds/about-two-bg-1.png" alt="">
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-5">
-                        <div class="about-two__left">
-                            <div class="about-two__img wow slideInLeft" data-wow-delay="100ms"
-                                data-wow-duration="2500ms">
-                                <img src="{{url_for('static', filename='assets/images/resources/about-one-1.jpg')}}" alt="">
-                                <div class="about-two__experience">
-                                    <div class="about-two__experience-count-box">
-                                        <h3 class="odometer" data-count="18">00</h3>
-                                        <span class="about-two__experience-plus">+</span>
-                                    </div>
-                                    <p class="about-two__experience-text">Years of
-                                        <br> Experience</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-7">
-                        <div class="about-Two__right">
-                            <div class="section-title text-left">
-                                <span class="section-title__tagline">Welcome</span>
-                                <h2 class="section-title__title">Area Lake Region Malaria Expo</h2>
-                                <div class="section-title__icon">
-                                    <img src="assets/images/icon/section-title-icon-1.png" alt="">
-                                </div>
-                            </div>
-                            <p class="about-two__text">The Expo's objective is to educate and provide the Lake Victoria region communities with knowledge and preventative measures to mitigate the harm caused by the malaria pandemic. The expo will combine three main directives for intervention</p>
-                            <ul class="about-two__points list-unstyled">
-                                <li>
-                                    <div class="about-two__icon">
-                                        <span class="fa fa-check"></span>
-                                    </div>
-                                    <div class="about-two__title">
-                                        <h3>Education
-                                           </h3>
-                                    </div>
+                <div class="col-md-12 col-lg-5">
+                    <div class="about-content-right mb-md-4 mb-lg-0">
+                        <h2>Area Lake Region Malaria Expo</h2>
+                        <p>The Expo's objective is to educate and provide the Lake Victoria region communities with
+                            knowledge and preventative measures to mitigate the harm caused by the malaria pandemic. The
+                            expo will combine three main directives for intervention.</p>
+                        <div class="feature-tabs-wrap">
+                            <ul class="nav nav-tabs mb-3 border-bottom-0 feature-tabs" data-tabs="tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex align-items-center active" href="#feature-tab-1"
+                                       data-toggle="tab">
+                                        <h6 class="mb-0">Education</h6>
+                                    </a>
                                 </li>
-                                <li>
-                                    <div class="about-two__icon">
-                                        <span class="fa fa-check"></span>
-                                    </div>
-                                    <div class="about-two__title">
-                                        <h3>Provision</h3>
-                                    </div>
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex align-items-center" href="#feature-tab-2"
+                                       data-toggle="tab">
+                                        <h6 class="mb-0">Provision</h6>
+                                    </a>
                                 </li>
-                                <li>
-                                    <div class="about-two__icon">
-                                        <span class="fa fa-check"></span>
-                                    </div>
-                                    <div class="about-two__title">
-                                        <h3>Research</h3>
-                                    </div>
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex align-items-center" href="#feature-tab-3"
+                                       data-toggle="tab">
+                                        <h6 class="mb-0">Research</h6>
+                                    </a>
                                 </li>
                             </ul>
+                            <div class="tab-content feature-tab-content">
+                                <div class="tab-pane active" id="feature-tab-1">
+                                    <p>According to health professionals, Malaria is the leading cause severe illness in
+                                        their communities. Most inhabitants of Lake Victoria have minimal understanding
+                                        of Malaria symptoms, the difficulties of diagnosis, and simple preventative
+                                        measure to protect them from contracting the disease. The expo will provide
+                                        information on how malaria is transmitted from a bite of an infected mosquito
+                                        (vector) and how to minimise their breading areas. It will educate on the
+                                        elusive nature of malaria in the blood and the difficulties of its diagnosis.
+                                        Advice will be provided on symptoms, care/treatment, and home remedies for
+                                        adults and children. The expo will provide simple, everyday practices to do at
+                                        home and school to minimise / prevent the risk of exposure to the disease,
+                                        including the growing of natural insect-repellent plants.</p>
+                                </div>
+                                <div class="tab-pane" id="feature-tab-2">
+                                    <p>Preventative measures can be taken to mitigate exposure of mosquito infected with
+                                        the Plasmodium parasite responsible for malaria. The expos participating NGOs
+                                        can provide mosquito nets and window screens, topical insect repellents and
+                                        rapid diagnostic malaria tests and vaccines. *Possible: NGO supply insect
+                                        repellent plants/seeds.</p>
+                                </div>
+                                <div class="tab-pane" id="feature-tab-3">
+                                    <p>Many organizations have done research to find ways to mitigate malaria in high
+                                        endemic zones. Studies investigate Malaria vector's breeding grounds in and
+                                        around Lake Victoria. Mitigation efforts have been launched to reduce the
+                                        prevalence of water hyacinth in the Lake; an invasive species very harmful for
+                                        the health of the Lake and that provides a perfect breeding place for malaria
+                                        mosquitos. The Kenyan and Indian Governments provided water hyacinth harvesters
+                                        to fight against this ever-growing species. Other countries are trying to help
+                                        with the use of biological control to remove the weed, especially the
+                                        Neochetina weevil, already in use for the same purpose in other malaria endemic regions.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="action-btns mt-3">
+                            <a href="{{url_for('frontend.get_involved')}}" class="btn secondary-solid-btn">More Info / Get Involved</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="services-two" id="services">
-            <div class="services-two__bg" style="background-image: url({{url_for('static', filename='assets/images/shapes/services-two-shape-1.png')}});">
-            </div>
-            <div class="container">
-                <div class="section-title text-center">
-                    <span class="section-title__tagline">What We’re Doing</span>
-                    <h2 class="section-title__title">Services We’re offering</h2>
-                    <div class="section-title__icon">
-                        <img src="{{url_for('static', filename='assets/images/icon/section-title-icon-1.png')}}" alt="">
-                    </div>
+</div>
+
+<footer class="footer-section">
+
+    <div class="footer-bottom gray-light-bg py-2">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-5 col-lg-5">
+                    <p class="copyright-text pb-0 mb-0">Copyrights © 2024. All
+                        rights reserved by ALRME</p>
                 </div>
-                <div class="row">
-                    <!--Services Two Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
-                        <div class="services-two__single">
-                            <div class="services-two__img">
-                                <img src="{{url_for('static', filename='assets/images/services/services-two-1.jpg')}}" alt="">
-                            </div>
-                            <div class="services-two__content">
-                                <div class="services-two__icon">
-                                    <span class="icon-dairy-products"></span>
-                                </div>
-                                <div class="services-two__more-details">
-                                    <a href="#"><i class="icon-right-arrow"></i>More Detail</a>
-                                </div>
-                            </div>
-                            <div class="services-two__title-box">
-                                <p class="services-two__subtitle">01 Services</p>
-                                <h3 class="services-two__title"><a href="#">Education</a></h3>
-                            </div>
-                            <div class="services-two__hover-content">
-                                <p class="services-two__hover-sub-title">01 Services</p>
-                                <h3 class="services-two__hover-title"><a href="#">Education</a>
-                                </h3>
-                                <p class="services-two__hover-text">According to area health <br> professionals ...</p>
-                                <div class="services-two__hover-more-details">
-                                    <a href="#"><i class="icon-right-arrow"></i>More Detail</a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-md-7 col-lg-6 d-none d-md-block d-lg-block">
+                    <div class="social-nav text-right">
+                        <ul class="list-unstyled social-list mb-0">
+                            <li class="list-inline-item tooltip-hover">
+                                <a href="#" class="rounded"><span class="ti-facebook"></span></a>
+                                <div class="tooltip-item">Facebook</div>
+                            </li>
+                            <li class="list-inline-item tooltip-hover"><a href="#" class="rounded"><span
+                                    class="ti-twitter"></span></a>
+                                <div class="tooltip-item">Twitter</div>
+                            </li>
+                            <li class="list-inline-item tooltip-hover"><a href="#" class="rounded"><span
+                                    class="ti-linkedin"></span></a>
+                                <div class="tooltip-item">Linkedin</div>
+                            </li>
+                            <li class="list-inline-item tooltip-hover"><a href="#" class="rounded"><span
+                                    class="ti-dribbble"></span></a>
+                                <div class="tooltip-item">Dribbble</div>
+                            </li>
+                        </ul>
                     </div>
-
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
-                        <div class="services-two__single">
-                            <div class="services-two__img">
-                                <img src="{{url_for('static', filename='assets/images/services/services-two-2.jpg')}}" alt="">
-                            </div>
-                            <div class="services-two__content">
-                                <div class="services-two__icon">
-                                    <span class="icon-dairy-products"></span>
-                                </div>
-                                <div class="services-two__more-details">
-                                    <a href="#"><i class="icon-right-arrow"></i>More Detail</a>
-                                </div>
-                            </div>
-                            <div class="services-two__title-box">
-                                <p class="services-two__subtitle">02 Services</p>
-                                <h3 class="services-two__title"><a href="#">Provision</a>
-                                </h3>
-                            </div>
-                            <div class="services-two__hover-content">
-                                <p class="services-two__hover-sub-title">02 Services</p>
-                                <h3 class="services-two__hover-title"><a href="">Provision</a></h3>
-                                <p class="services-two__hover-text">Preventive measures can be taken <br> to mitigate ...</p>
-                                <div class="services-two__hover-more-details">
-                                    <a href="#"><i class="icon-right-arrow"></i>More Detail</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Services Two Single End-->
-                    <!--Services Two Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="services-two__single">
-                            <div class="services-two__img">
-                                <img src="{{url_for('static', filename='assets/images/services/services-two-3.jpg')}}" alt="">
-                            </div>
-                            <div class="services-two__content">
-                                <div class="services-two__icon">
-                                    <span class="icon-dairy-products"></span>
-                                </div>
-                                <div class="services-two__more-details">
-                                    <a href="#"><i class="icon-right-arrow"></i>More Detail</a>
-                                </div>
-                            </div>
-                            <div class="services-two__title-box">
-                                <p class="services-two__subtitle">03 Services</p>
-                                <h3 class="services-two__title"><a href="#">Research</a></h3>
-                            </div>
-                            <div class="services-two__hover-content">
-                                <p class="services-two__hover-sub-title">03 Services</p>
-                                <h3 class="services-two__hover-title"><a href="#">Research</a>
-                                </h3>
-                                <p class="services-two__hover-text">Many organisations have done research <br> to find out ...</p>
-                                <div class="services-two__hover-more-details">
-                                    <a href="#"><i class="icon-right-arrow"></i>More Detail</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Services Two Single End-->
-                </div>
-            </div>
-        </section>
-
-        <section class="Provide-One">
-            <div class="Provide-One__wrap">
-                <div class="Provide-One__left">
-                    <div class="Provide-One__bg"
-                        style="background-image: url({{url_for('static', filename='assets/images/backgrounds/provide-one-bg.jpg')}});"></div>
-                    <div class="provide-one__sopport">
-                        <div class="provide-one__support-icon">
-                            <span class="icon-harvester"></span>
-                        </div>
-                        <p class="provide-one__support-text">We’re here to support
-                            you every step of the way.</p>
-                    </div>
-                </div>
-                <div class="Provide-One__right">
-                    <div class="provide-one__bg-shape float-bob-x">
-                        <img src="{{url_for('static', filename='assets/images/backgrounds/provide-one-shape-1.png')}}" alt="">
-                    </div>
-                    <div class="Provide-One__content">
-                        <div class="section-title text-left">
-                            <h2 class="section-title__title">Our Benefits</h2>
-                            <div class="section-title__icon">
-                                <img src="{{url_for('static', filename='assets/images/icon/section-title-icon-1.png')}}" alt="">
-                            </div>
-                        </div>
-                        <p class="Provide-One__text">We provide information on how malaria is transmitted from the bite of an infected mosquito(vector) and how to minimize the breeding areas. </p>
-                        <p class="Provide-One__text">Participating NGOs can provide mosquito nets and window screens, topical insect repellents and rapid diagnostic malaria tests and vaccines.</p>
-                        <p class="Provide-One__text">We conduct studies to investigate the malaria vectors breeding grounds in and around lake victoria.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="video-one">
-            <div class="video-one-bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-                style="background-image: url({{url_for('static', filename='assets/images/backgrounds/video-one-bg.jpg')}})"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="video-one__inner">
-                            <div class="video-one__video-link">
-                                <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
-                                    <div class="video-one__video-icon">
-                                        <span class="fa fa-play"></span>
-                                        <i class="ripple"></i>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="video-one__shape">
-                                <img src="{{url_for('static', filename='assets/images/resources/video-one-1.png')}}" alt="">
-                            </div>
-                            <h2 class="video-one__video-title">Be The Conduit.</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="faq-one">
-            <div class="faq-one-bg" style="background-image: url({{url_for('static', filename='assets/images/backgrounds/faq-one-bg.png')}});"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6">
-                        <div class="faq-one__left">
-                            <div class="section-title text-left">
-                                <span class="section-title__tagline">Frequently Asked Questions</span>
-                                <h2 class="section-title__title">How can we help you?</h2>
-                                <div class="section-title__icon">
-                                    <img src="{{url_for('static', filename='assets/images/icon/section-title-icon-1.png')}}" alt="">
-                                </div>
-                            </div>
-                            <div class="faq-one__img-box">
-                                <div class="faq-one__img">
-                                    <img src="{{url_for('static', filename='assets/images/resources/faq-one-1.jpg')}}" alt="">
-                                    <div class="faq-one__img-icon">
-                                        <span class="icon-tractor"></span>
-                                    </div>
-                                </div>
-                                <ul class="faq-one__points list-unstyled">
-                                    <li class="faq-one__points-list">
-                                        <div class="faq-one__icon">
-                                            <span class="fa fa-check"></span>
-                                        </div>
-                                        <div class="faq-one__text">
-                                            <p>Refresing to get such touch</p>
-                                        </div>
-                                    </li>
-                                    <li class="faq-one__points-list">
-                                        <div class="faq-one__icon">
-                                            <span class="fa fa-check"></span>
-                                        </div>
-                                        <div class="faq-one__text">
-                                            <p>Duis aute irure dolor</p>
-                                        </div>
-                                    </li>
-                                    <li class="faq-one__points-list">
-                                        <div class="faq-one__icon">
-                                            <span class="fa fa-check"></span>
-                                        </div>
-                                        <div class="faq-one__text">
-                                            <p>Reprehenderit in voluptate</p>
-                                        </div>
-                                    </li>
-                                    <li class="faq-one__points-list">
-                                        <div class="faq-one__icon">
-                                            <span class="fa fa-check"></span>
-                                        </div>
-                                        <div class="faq-one__text">
-                                            <p>Fugiat nulla pariatur cillum</p>
-                                        </div>
-                                    </li>
-                                    <li class="faq-one__points-list">
-                                        <div class="faq-one__icon">
-                                            <span class="fa fa-check"></span>
-                                        </div>
-                                        <div class="faq-one__text">
-                                            <p>Velit esse dolore eu</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6">
-                        <div class="faq-one__right">
-                            <div class="accrodion-grp" data-grp-name="faq-one-accrodion">
-                                <div class="accrodion active">
-                                    <div class="accrodion-title">
-                                        <h4>Company Provides a Full Range of Services?</h4>
-                                    </div>
-                                    <div class="accrodion-content">
-                                        <div class="inner">
-                                            <p>Suspendisse finibus urna mauris, vitae consequat quam vel. Vestibulum leo
-                                                ligula, vitae commodo nisl. Lorem ipsum dolor sit amet, consectetur
-                                                adipisi cing elit.</p>
-                                        </div><!-- /.inner -->
-                                    </div>
-                                </div>
-                                <div class="accrodion">
-                                    <div class="accrodion-title">
-                                        <h4>Home Improvement Works are Expensive?</h4>
-                                    </div>
-                                    <div class="accrodion-content">
-                                        <div class="inner">
-                                            <p>Suspendisse finibus urna mauris, vitae consequat quam vel. Vestibulum leo
-                                                ligula, vitae commodo nisl. Lorem ipsum dolor sit amet, consectetur
-                                                adipisi cing elit.</p>
-                                        </div><!-- /.inner -->
-                                    </div>
-                                </div>
-                                <div class="accrodion">
-                                    <div class="accrodion-title">
-                                        <h4>Taking Seamless Key Performance Indicators?</h4>
-                                    </div>
-                                    <div class="accrodion-content">
-                                        <div class="inner">
-                                            <p>Suspendisse finibus urna mauris, vitae consequat quam vel. Vestibulum leo
-                                                ligula, vitae commodo nisl. Lorem ipsum dolor sit amet, consectetur
-                                                adipisi cing elit.</p>
-                                        </div><!-- /.inner -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Faq One End-->
-
-        <!--Project Two Start-->
-        <section class="project-two" id="projects">
-            <div class="container">
-                <div class="section-title text-center">
-                    <span class="section-title__tagline">Our Latest Projects</span>
-                    <h2 class="section-title__title">Recently completed Projects</h2>
-                    <div class="section-title__icon">
-                        <img src="{{url_for('static', filename='assets/images/icon/section-title-icon-1.png')}}" alt="">
-                    </div>
-                </div>
-                <div class="project-two__carousel thm-owl__carousel owl-theme owl-carousel" data-owl-options='{
-                    "items": 3,
-                    "margin": 30,
-                    "smartSpeed": 700,
-                    "loop":true,
-                    "autoplay": 6000,
-                    "nav":false,
-                    "dots":false,
-                    "navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],
-                    "responsive":{
-                        "0":{
-                            "items":1
-                        },
-                        "768":{
-                            "items":2
-                        },
-                        "992":{
-                            "items": 2
-                        }
-                    }
-                }'>
-                    <!--Project Two Single Start-->
-                    <div class="item">
-                        <div class="project-two__single">
-                            <div class="project-two__img">
-                                <img src="{{url_for('static', filename='assets/images/project/project-two-2.jpg')}}" alt="">
-                                <div class="project-two__content">
-                                    <h3 class="project-two__title"><a href="#">ALRME <br>
-                                            </a></h3>
-                                    <div class="project-two__arrow">
-                                        <a href=""><span class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="project-two__single">
-                            <div class="project-two__img">
-                                <img src="{{url_for('static', filename='assets/images/project/project-two-3.jpg')}}" alt="">
-                                <div class="project-two__content">
-                                    <h3 class="project-two__title"><a href="#">Luo-Luhya Culture Day <br>
-                                            </a></h3>
-                                    <div class="project-two__arrow">
-                                        <a href="#"><span class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="project-two__single">
-                            <div class="project-two__img">
-                                <img src="{{url_for('static', filename='assets/images/project/project-two-4.jpg')}}" alt="">
-                                <div class="project-two__content">
-                                    <h3 class="project-two__title"><a href="#">Climate Change Agriculture Forum <br>
-                                            </a></h3>
-                                    <div class="project-two__arrow">
-                                        <a href="#"><span class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Project Two Single End-->
-                </div>
-            </div>
-        </section>
-        <!--Project Two End-->
-
-        <!--Team One Start-->
-        <section class="team-one" id="team">
-            <div class="container">
-                <div class="section-title text-center">
-                    <span class="section-title__tagline">Team Members</span>
-                    <h2 class="section-title__title">Meet our Team</h2>
-                    <div class="section-title__icon">
-                        <img src="{{url_for('static', filename='assets/images/icon/section-title-icon-1.png')}}" alt="">
-                    </div>
-                </div>
-                <div class="row">
-                    <!--Team One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
-                        <div class="team-one__single">
-                            <div class="team-one__shape-1">
-                                <img src="{{url_for('static', filename='assets/images/shapes/team-one-shape-1.png')}}" alt="">
-                            </div>
-                            <div class="team-one__img-box">
-                                <div class="team-one__img">
-                                    <img src="{{url_for('static', filename='assets/images/team/team-1-1.jpg')}}" alt="">
-                                    <ul class="list-unstyled team-one__social">
-                                        <li><a href="mailto:ce1@cbsnews.com"><i class="fas fa-envelope"></i> <span
-                                                    class="team-one__social-name">Email</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="tel:+19178367831"><i class="fas fa-phone"></i> <span
-                                                    class="team-one__social-name">Phone Number</span></a>
-                                        </li>
-                                    </ul>
-                                    <div class="team-one__icon">
-                                        <a href="#"><i class="fas fa-share-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-one__content">
-                                <h3 class="team-one__title"><a href="#">Chris Meyer</a></h3>
-                                <p class="team-one__subtitle">Senior Manager</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Team One Single End-->
-                    <!--Team One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
-                        <div class="team-one__single">
-                            <div class="team-one__shape-1">
-                                <img src="{{url_for('static', filename='assets/images/shapes/team-one-shape-1.png')}}" alt="">
-                            </div>
-                            <div class="team-one__img-box">
-                                <div class="team-one__img">
-                                    <img src="{{url_for('static', filename='assets/images/team/team-1-2.jpg')}}" alt="">
-                                    <ul class="list-unstyled team-one__social">
-                                        <li><a href="mailto:hasselmarkda@outlook.com"><i class="fas fa-envelope"></i> <span
-                                                    class="team-one__social-name">Email</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="tel:+15122884137"><i class="fas fa-phone"></i> <span
-                                                    class="team-one__social-name">Phone Number</span></a>
-                                        </li>
-                                    </ul>
-                                    <div class="team-one__icon">
-                                        <a href="#"><i class="fas fa-share-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-one__content">
-                                <h3 class="team-one__title"><a href="#">Deborah Hasselmark</a></h3>
-                                <p class="team-one__subtitle">Senior Manager</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Team One Single End-->
-                    <!--Team One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="team-one__single">
-                            <div class="team-one__shape-1">
-                                <img src="{{url_for('static', filename='assets/images/shapes/team-one-shape-1.png')}}" alt="">
-                            </div>
-                            <div class="team-one__img-box">
-                                <div class="team-one__img">
-                                    <img src="{{url_for('static', filename='assets/images/team/team-1-3.jpg')}}" alt="">
-                                    <ul class="list-unstyled team-one__social">
-                                        <li><a href="mailto:sibuorbill@gmail.com"><i class="fas fa-envelope"></i> <span
-                                                    class="team-one__social-name">Email</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="+254798994948"><i class="fas fa-phone"></i> <span
-                                                    class="team-one__social-name">Phone Number</span></a>
-                                        </li>
-                                    </ul>
-                                    <div class="team-one__icon">
-                                        <a href="#"><i class="fas fa-share-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-one__content">
-                                <h3 class="team-one__title"><a href="#">Bill Sibuor</a></h3>
-                                <p class="team-one__subtitle">Senior Manager</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Team One Single End-->
-                </div>
-            </div>
-        </section>
-        <!--Team One End-->
-
-        <!--Testimonial Two Start-->
-        <section class="testimonial-two">
-            <div class="testimonial-two__shape-1 float-bob-x"
-                style="background-image: url({{url_for('static', filename='assets/images/shapes/testimonial-two-shape-1.png')}});"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-7 col-lg-6">
-                        <div class="testimonial-two__left">
-                            <div class="section-title text-left">
-                                <span class="section-title__tagline">Our Testimonials</span>
-                                <h2 class="section-title__title">What they’re talking?</h2>
-                                <div class="section-title__icon">
-                                    <img src="{{url_for('static', filename='assets/images/icon/section-title-icon-1.png')}}" alt="">
-                                </div>
-                            </div>
-                            <div class="testimonial-two__slider">
-                                <div class="testimonials-two__thumb-wrapper">
-                                    <div class="swiper-container" id="testimonials-two__thumb">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <div class="testimonial-two__img-holder">
-                                                    <img src="{{url_for('static', filename='assets/images/testimonial/testimonial-2-1.jpg')}}" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="testimonial-two__img-holder">
-                                                    <img src="{{url_for('static', filename='assets/images/testimonial/testimonial-2-2.jpg')}}" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="testimonial-two__img-holder">
-                                                    <img src="{{url_for('static', filename='assets/images/testimonial/testimonial-2-3.jpg')}}" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!-- /.testimonials-one__thumb-wrapper -->
-
-                                <div class="testimonial-two__main-content">
-                                    <div class="swiper-container" id="testimonials-two__carousel">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <div class="testimonial-two__content-box">
-                                                    <p class="testimonial-two__text">I’ve just had two of the most
-                                                        productive work weeks I have had in years. Ben was perfectly
-                                                        matched to my temperament, and has been taking all the
-                                                        backlogged work off my plate and finishing it.</p>
-                                                    <div class="testimonial-two__client-info">
-                                                        <p class="testimonial-two__client-text">Sarah Albert <span>-
-                                                                Co-Founder</span></p>
-                                                    </div>
-                                                    <div class="testimonial-two__quote">
-                                                        <span class="icon-quote"></span>
-                                                    </div>
-                                                </div>
-                                            </div><!-- /.swiper-slide -->
-                                            <div class="swiper-slide">
-                                                <div class="testimonial-two__content-box">
-                                                    <p class="testimonial-two__text">I’ve just had two of the most
-                                                        productive work weeks I have had in years. Ben was perfectly
-                                                        matched to my temperament, and has been taking all the
-                                                        backlogged work off my plate and finishing it.</p>
-                                                    <div class="testimonial-two__client-info">
-                                                        <p class="testimonial-two__client-text">Kevin Martin <span>-
-                                                                Co-Founder</span></p>
-                                                    </div>
-                                                    <div class="testimonial-two__quote">
-                                                        <span class="icon-quote"></span>
-                                                    </div>
-                                                </div>
-                                            </div><!-- /.swiper-slide -->
-                                            <div class="swiper-slide">
-                                                <div class="testimonial-two__content-box">
-                                                    <p class="testimonial-two__text">I’ve just had two of the most
-                                                        productive work weeks I have had in years. Ben was perfectly
-                                                        matched to my temperament, and has been taking all the
-                                                        backlogged work off my plate and finishing it.</p>
-                                                    <div class="testimonial-two__client-info">
-                                                        <p class="testimonial-two__client-text">Aleesha Brown <span>-
-                                                                Co-Founder</span></p>
-                                                    </div>
-                                                    <div class="testimonial-two__quote">
-                                                        <span class="icon-quote"></span>
-                                                    </div>
-                                                </div>
-                                            </div><!-- /.swiper-slide -->
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div id="testimonials-one__carousel-pagination"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-5 col-lg-6">
-                        <div class="testimonial-two__right">
-                            <ul class="testimonial-two__counter list-unstyled">
-                                <li>
-                                    <div class="testimonial-two__counter-icon">
-                                        <span class="icon-seeds"></span>
-                                    </div>
-                                    <div class="testimonial-two__counter-content-box">
-                                        <div class="testimonial-two__counter-count-box">
-                                            <h3 class="odometer" data-count="4850">00</h3>
-                                            <span class="counter-one__plus">+</span>
-                                        </div>
-                                        <p class="testimonial-two__counter-text">Research Projects</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="testimonial-two__counter-icon">
-                                        <span class="icon-cotton"></span>
-                                    </div>
-                                    <div class="testimonial-two__counter-content-box">
-                                        <div class="testimonial-two__counter-count-box">
-                                            <h3 class="odometer" data-count="1760">00</h3>
-                                            <span class="counter-one__plus">+</span>
-                                        </div>
-                                        <p class="testimonial-two__counter-text">Provisions</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="testimonial-two__counter-icon">
-                                        <span class="icon-customer"></span>
-                                    </div>
-                                    <div class="testimonial-two__counter-content-box">
-                                        <div class="testimonial-two__counter-count-box">
-                                            <h3 class="odometer" data-count="6890">00</h3>
-                                            <span class="counter-one__plus">+</span>
-                                        </div>
-                                        <p class="testimonial-two__counter-text">Happy Schools</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Testimonial Two End-->
-
-        <!--Blog Two Start-->
-        <section class="blog-two" id="blog">
-            <div class="container">
-                <div class="blog-two__inner">
-                    <div class="blog-two-shape-1"></div>
-                    <div class="blog-two__top">
-                        <div class="section-title text-left">
-                            <span class="section-title__tagline">From the Blog Post</span>
-                            <h2 class="section-title__title">News & Articles</h2>
-                            <div class="section-title__icon">
-                                <img src="{{url_for('static', filename='assets/images/icon/section-title-icon-1.png')}}" alt="">
-                            </div>
-                        </div>
-                        <div class="blog-two__btn-box">
-                            <a href="#" class="thm-btn contact-one__btn">View All Posts <i
-                                    class="icon-right-arrow"></i> </a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!--Blog One Single Start-->
-                        <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
-                            <div class="blog-one__single">
-                                <div class="blog-one__img">
-                                    <img src="{{url_for('static', filename='assets/images/blog/blog-one-1.jpg')}}" alt="">
-                                </div>
-                                <div class="blog-one__content">
-                                    <h3 class="blog-one__title"><a href="#">Why ALRME is for the environment</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Blog One Single End-->
-                        <!--Blog One Single Start-->
-                        <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
-                            <div class="blog-one__single">
-                                <div class="blog-one__img">
-                                    <img src="{{url_for('static', filename='assets/images/blog/blog-one-2.jpg')}}" alt="">
-                                </div>
-                                <div class="blog-one__content">
-                                    <h3 class="blog-one__title"><a href="#">Why ALRME is for the environment</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Blog One Single End-->
-                        <!--Blog One Single Start-->
-                        <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
-                            <div class="blog-one__single">
-                                <div class="blog-one__img">
-                                    <img src="{{url_for('static', filename='assets/images/blog/blog-one-3.jpg')}}" alt="">
-                                </div>
-                                <div class="blog-one__content">
-                                    <h3 class="blog-one__title"><a href="#">Why ALRME is for the environment</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Blog One Single End-->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Blog Two End-->
-
-        <!--Site Footer Start-->
-        <footer class="site-footer">
-            <div class="site-footer__top">
-                <div class="container">
-                    <div class="site-footer__top-inner">
-                        <div class="site-footer-shape-1 float-bob-x"
-                            style="background-image: url({{url_for('static', filename='assets/images/shapes/site-footer-shape-1.png')}});"></div>
-                        <div class="row">
-                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                                <div class="footer-widget__column footer-widget__about">
-                                    <div class="footer-widget__logo">
-                                        <a href="index.html"><img src="assets/images/resources/footer-logo.png"
-                                                alt=""></a>
-                                    </div>
-                                    <div class="footer-widget__about-text-box">
-                                        <p class="footer-widget__about-text">Be The Conduit. Lorem
-                                            simply text amet cing elit.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                                <div class="footer-widget__column footer-widget__Explore">
-                                    <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">Explore</h3>
-                                    </div>
-                                    <ul class="footer-widget__Explore-list list-unstyled">
-                                        <li><a href="#about">About</a></li>
-                                        <li><a href="#projects">Projects</a></li>
-                                        <li><a href="#services">Services</a></li>
-                                        <li><a href="#team">Our Team</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                                <div class="footer-widget__column footer-widget__news">
-                                    <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">News</h3>
-                                    </div>
-                                    <ul class="footer-widget__news-list list-unstyled">
-                                        <li>
-                                            <div class="footer-widget__news-img">
-                                                <img src="{{url_for('static', filename='assets/images/resources/footer-widget-news-img-1.jpg')}}" alt="">
-                                            </div>
-                                            <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date"></p>
-                                                <h5 class="footer-widget__news-sub-title"><a href="#">
-                                                        ALRME Research</a></h5>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="footer-widget__news-img">
-                                                <img src="{{url_for('static', filename='assets/images/resources/footer-widget-news-img-2.jpg')}}" alt="">
-                                            </div>
-                                            <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date"></p>
-                                                <h5 class="footer-widget__news-sub-title"><a href="#">ALRME Education
-                                                      </a></h5>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                                <div class="footer-widget__column footer-widget__Contact">
-                                    <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">Contact</h3>
-                                    </div>
-                                    <ul class="footer-widget__Contact-list list-unstyled">
-                                        <li>
-                                            <div class="icon">
-                                                <span class="fas fa-phone-square-alt"></span>
-                                            </div>
-                                            <div class="text">
-                                                <p><a href="tel:9200886823">+92 (0088) 6823</a></p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <span class="fas fa-envelope"></span>
-                                            </div>
-                                            <div class="text">
-                                                <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <span class="icon-pin"></span>
-                                            </div>
-                                            <div class="text">
-                                                <p>NY USA, Texas USA, West Ugenya Kenya.</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="site-footer__bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="site-footer__bottom-inner">
-                                <p class="site-footer__bottom-text">© Copyright 2024 by <a href="#">ALRME</a></p>
-                                <div class="site-footer__social">
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-facebook"></i></a>
-                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                                <div class="site-footer__bottom-scroll">
-                                    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i
-                                            class="icon-up-arrow"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-    </div><!-- /.page-wrapper -->
-
-
-    <div class="mobile-nav__wrapper">
-        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
-        <!-- /.mobile-nav__overlay -->
-        <div class="mobile-nav__content">
-            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
-
-            <div class="logo-box">
-                <a href="#" aria-label="logo image"><img src="" width="122"
-                        alt="" /></a>
-            </div>
-            <!-- /.logo-box -->
-            <div class="mobile-nav__container"></div>
-            <!-- /.mobile-nav__container -->
-
-            <ul class="mobile-nav__contact list-unstyled">
-                <li>
-                    <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@company.com">needhelp@company.com</a>
-                </li>
-                <li>
-                    <i class="fa fa-phone-alt"></i>
-                    <a href="">666 888 0000</a>
-                </li>
-            </ul>
-            <div class="mobile-nav__top">
-                <div class="mobile-nav__social">
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-facebook-square"></a>
-                    <a href="#" class="fab fa-pinterest-p"></a>
-                    <a href="#" class="fab fa-instagram"></a>
                 </div>
             </div>
         </div>
     </div>
+</footer>
 
-    <div class="search-popup">
-        <div class="search-popup__overlay search-toggler"></div>
-        <div class="search-popup__content">
-            <form action="#">
-                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
-                <input type="text" id="search" placeholder="Search Here..." />
-                <button type="submit" aria-label="search submit" class="thm-btn">
-                    <i class="icon-magnifying-glass"></i>
-                </button>
-            </form>
-        </div>
-    </div>
+<button class="scroll-top scroll-to-target" data-target="html">
+    <span class="ti-angle-up"></span>
+</button>
 
-
-    <script src="{{url_for('static', filename='assets/vendors/jquery/jquery-3.6.0.min.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/jarallax/jarallax.min.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/jquery-appear/jquery.appear.min.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/jquery-validate/jquery.validate.min.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/nouislider/nouislider.min.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/odometer/odometer.min.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/swiper/swiper.min.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/tiny-slider/tiny-slider.min.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/wnumb/wNumb.min.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/wow/wow.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/isotope/isotope.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/countdown/countdown.min.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/owl-carousel/owl.carousel.min.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/bxslider/jquery.bxslider.min.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/bootstrap-select/js/bootstrap-select.min.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/vegas/vegas.min.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/jquery-ui/jquery-ui.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/timepicker/timePicker.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/circleType/jquery.circleType.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/vendors/circleType/jquery.lettering.min.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/js/agrion.js')}}"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.mb.YTPlayer.min.js"></script>
+<script src="js/mixitup.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/scripts.js"></script>
 </body>
-
 </html>
