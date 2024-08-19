@@ -19,7 +19,7 @@
     <meta property="og:url" content=""/> <!-- where do you want your post to link to -->
     <meta property="og:type" content="article"/>
 
-    <title>BeTheConduit</title>
+    <title>ALRME</title>
 
     <!--favicon icon-->
     <link rel="icon" href="img/favicon.png" type="image/png" sizes="16x16">
@@ -61,14 +61,26 @@
     </div>
 </div>
 
+<header class="header">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <h2>ALRME</h2>
+                <!-- <img src="img/logo-color.png" alt="logo" class="img-fluid"/>-->
+            </a>
+        </div>
+    </nav>
+</header>
+
 <div class="main">
 
-    <section class="about-us-section gray-light-bg ptb-100">
+    <section class="about-us-section ptb-100">
         <div class="container">
             <div class="row justify-content-around">
                 <div class="col-md-12 col-lg-6">
                     <div class="about-img-wrap">
-                        <img src="{{url_for('static', filename='img/africamap.PNG')}}" alt="video" class="img-fluid rounded shadow-sm">
+                        <img src="{{url_for('static', filename='img/africamap.PNG')}}" alt="video"
+                             class="img-fluid rounded shadow-sm">
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-5">
@@ -128,14 +140,15 @@
                                         mosquitos. The Kenyan and Indian Governments provided water hyacinth harvesters
                                         to fight against this ever-growing species. Other countries are trying to help
                                         with the use of biological control to remove the weed, especially the
-                                        Neochetina weevil, already in use for the same purpose in other malaria endemic regions.</p>
+                                        Neochetina weevil, already in use for the same purpose in other malaria endemic
+                                        regions.</p>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="action-btns mt-3">
-                            <a href="{{url_for('frontend.get_involved')}}" class="btn secondary-solid-btn">More Info / Get Involved</a>
-                        </div>
+                    </div>
+                    <div class="action-btns mt-3">
+                        <a href="{{url_for('frontend.get_involved')}}" class="btn secondary-solid-btn">More Info / Get
+                            Involved</a>
                     </div>
                 </div>
             </div>
@@ -146,7 +159,7 @@
 
 <footer class="footer-section">
 
-    <div class="footer-bottom gray-light-bg py-2">
+    <div class="footer-bottom py-2">
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-md-5 col-lg-5">
